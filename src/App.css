@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.main-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.score-board{
+    width: 700px;   
+}
+.score{
+    display: flex;
+    flex-direction: row;
+}
+.color-chooser {
+    width: 700px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+    font-size: 40px;
+}
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: 2.5%;
+    width: 700px;
+    height: 600px;
+}
+.slot-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid blue;
+}
+.slot-square:hover {
+    cursor: pointer;
+}
+.slot-circle {
+    width: 80%;
+    height: 80%;
+    border-radius:50% ;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin {
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+
+.player-turn {
+    width: 25vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.result-container {
+    width: 25vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
