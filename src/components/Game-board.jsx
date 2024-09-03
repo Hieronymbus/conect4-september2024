@@ -9,17 +9,7 @@ function Gameboard ({player,setPlayer,playerColors,setPlayerColors,
     const numberedGridArr = gridArr.map((_, index) => {
         return index 
     })
-    const [grid, setGrid] = useState([
-            [null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null]   
-        ]);
     
-
-
     useEffect(()=>{
 
        winningCombinations.forEach((combo,index)=> {
@@ -68,6 +58,7 @@ function Gameboard ({player,setPlayer,playerColors,setPlayerColors,
                         key={index}
                         id={slot}
                         columnIndex={index % 7}
+                        rowIndex={Math.floor(index/7)}
                         blueCoin={blueCoin}
                         redCoin={redCoin}
                         playerColors={playerColors}
@@ -78,8 +69,6 @@ function Gameboard ({player,setPlayer,playerColors,setPlayerColors,
                         setRed={setRedCoinArr}
                         blueCoinArr={blueCoinArr}
                         setBlue={setBlueCoinArr}
-                        grid={grid}
-                        setGrid={setGrid}
                         gameWon={gameWon}
                     />
                 )      

@@ -2,13 +2,24 @@ import React,{useState,useEffect} from "react";
 import Coin from "./Coin";
 
 function Slot ({id, blueCoin, redCoin , blueCoinArr, setBlue , redCoinArr, setRed , 
-    playerColors, setPlayerColors, player , setPlayer , gameWon, grid, setGrid,columnIndex}) {
+    playerColors, setPlayerColors, player , setPlayer , gameWon, columnIndex,rowIndex}) {
 
-
+    const findLowestAvailableSlot = (columnIndex) => {
+        for (let row = 5; row >= 0; row--) {  
+            const slotId = row * 7 + columnIndex; 
+            if (!redCoinArr.includes(slotId) && !blueCoinArr.includes(slotId)) {
+                console.log(row)
+                return row;
+            };
+        };
+        return -1; 
+    };
     const handleSlotClick = (columnIndex) => {
-            if(gameWon) return
-            
-
+        if(gameWon) return
+        
+        const availableRow = findLowestAvailableSlot(columnIndex);
+        
+        if(rowIndex === availableRow){
             if(player === playerColors.playerOne && !blueCoinArr.includes(id)) {
                 setRed(prev => [...prev, id]);
                 setPlayer(playerColors.playerTwo);
@@ -17,7 +28,8 @@ function Slot ({id, blueCoin, redCoin , blueCoinArr, setBlue , redCoinArr, setRe
                 setBlue(prev => [...prev, id]);
                 setPlayer(playerColors.playerOne);           
             }   
-            console.log(columnIndex)              
+        };
+         
     };
 
     return (
