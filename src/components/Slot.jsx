@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from "react";
 import Coin from "./Coin";
 
-function Slot ({id, blueCoin, redCoin , blueCoinArr, setBlue , redCoinArr, setRed , 
-    playerColors, setPlayerColors, player , setPlayer , gameWon, columnIndex,rowIndex}) {
+function Slot ({id, blueCoin, redCoin, blueCoinArr, setBlue, redCoinArr, setRed, 
+    playerColors, player, setPlayer, gameWon, columnIndex, rowIndex}) {
 
     const findLowestAvailableSlot = (columnIndex) => {
         for (let row = 5; row >= 0; row--) {  

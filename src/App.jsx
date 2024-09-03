@@ -11,6 +11,7 @@ import ColorChooser from './components/ColorChooser'
 function App() {
   
   const [gameWon, setGameWon] = useState(false);
+  const [draw, setDraw] = useState(false)
   const [score, setScore] = useState({
     playerOne: 0,
     playerTwo: 0
@@ -31,6 +32,7 @@ function App() {
         player={player}
         locked={playerColors.locked}
         gameWon={gameWon}
+        draw={draw}
         redCoinArr={redCoinArr}
         setRedCoinArr={setRedCoinArr}
         blueCoinArr={blueCoinArr}
@@ -38,15 +40,11 @@ function App() {
       />
       <div>
         <ScoreBoard
-          gameWon={gameWon}
-          setGameWon={setGameWon}
           score={score}
           setScore={setScore}
-          player={player}
           setPlayer={setPlayer}
           playerColors={playerColors}
           setPlayerColors={setPlayerColors}
-
         />
         {!playerColors.locked && 
           <ColorChooser 
@@ -59,25 +57,29 @@ function App() {
         
         {playerColors.locked &&
           <Gameboard
-          gameWon={gameWon}
-          setGameWon={setGameWon}
-          score={score}
-          setScore={setScore}
-          player={player}
-          setPlayer={setPlayer}
-          playerColors={playerColors}
-          setPlayerColors={setPlayerColors}
-          redCoinArr={redCoinArr}
-          setRedCoinArr={setRedCoinArr}
-          blueCoinArr={blueCoinArr}
-          setBlueCoinArr={setBlueCoinArr}
-        />
+            gameWon={gameWon}
+            setGameWon={setGameWon}
+            draw={draw}
+            setDraw={setDraw}
+            score={score}
+            setScore={setScore}
+            player={player}
+            setPlayer={setPlayer}
+            playerColors={playerColors}
+            setPlayerColors={setPlayerColors}
+            redCoinArr={redCoinArr}
+            setRedCoinArr={setRedCoinArr}
+            blueCoinArr={blueCoinArr}
+            setBlueCoinArr={setBlueCoinArr}
+          />
         }
         
       </div>
       <Result
         gameWon={gameWon}
         setGameWon={setGameWon}
+        draw={draw}
+        setDraw={setDraw}
         player={player}
         setPlayer={setPlayer}
         setRedCoinArr={setRedCoinArr}

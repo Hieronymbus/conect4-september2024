@@ -2,8 +2,9 @@ import React,{useState,useEffect} from "react";
 import Slot from "./Slot";
 import winningCombinations from "../winningCombosArray";
 
-function Gameboard ({player,setPlayer,playerColors,setPlayerColors,
-    gameWon,setGameWon,blueCoinArr,setBlueCoinArr,redCoinArr,setRedCoinArr,setScore}) {
+function Gameboard ({player, setPlayer, playerColors, setPlayerColors,
+        gameWon, setGameWon, draw, setDraw, blueCoinArr, setBlueCoinArr, 
+        redCoinArr, setRedCoinArr, setScore}) {
 
     const gridArr = Array(7 * 6).fill(null);
     const numberedGridArr = gridArr.map((_, index) => {
@@ -38,8 +39,8 @@ function Gameboard ({player,setPlayer,playerColors,setPlayerColors,
                         playerTwo: prev.playerTwo + 1       
                 }))
             }
-            if(blueCoinArr.length + redCoinArr.length === 63){
-                
+            if(!gameWon && blueCoinArr.length + redCoinArr.length === 42){
+                setDraw(true)
             }
        })
 
