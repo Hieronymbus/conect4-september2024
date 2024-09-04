@@ -13,6 +13,7 @@ function PlayerTurn ({player,locked,gameWon, draw,setRedCoinArr,setBlueCoinArr})
             {locked && !gameWon && !draw &&
                 <div style={{textAlign:"center"}}>
                     <h1>{player} players turn</h1>
+                    <p><i>(stack from the bottom)</i></p>
                     <button onClick={handleGameReset} style={{marginTop: "10vh"}}>Reset Current Game </button>
                 </div> 
             } 

@@ -23,7 +23,7 @@ function Result ({gameWon, setGameWon, draw, setDraw, player, setRedCoinArr, set
         <div className= "result-container">
             {gameWon && <h1 style={{textAlign:"center"}}>{winningPlayer} has WON!!!!</h1>}
             {gameWon && <button onClick={handleRematch}>Rematch</button>}
-            {draw && <h1 style={{textAlign:"center"}}>Game is a Draw, Nobody Wins</h1>}
+            {draw && <h1 style={{textAlign:"center"}}>Game is a Draw, neither player gets a point</h1>}
             {draw && <button onClick={handleRematch} >Rematch</button>}
         </div>
    );

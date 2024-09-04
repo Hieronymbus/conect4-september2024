@@ -25,13 +25,13 @@ function ScoreBoard({score, setScore, playerColors,setPlayerColors,setPlayer}) {
             </h1>
             {playerColors.locked &&
                 <div className="scoresButtons">
-                    <div>
-                        <h1>Scores:</h1>
+                    <div className="scores">
+                        <h1 style={{textDecoration:"underline"}}>Scores</h1>
                         <h2 >
-                            Player One({playerColors.playerOne}) : {score.playerOne}
+                            Player One ({playerColors.playerOne}) : {score.playerOne}
                         </h2>
                         <h2 >
-                            Player Two({playerColors.playerTwo}) : {score.playerTwo}
+                            Player Two ({playerColors.playerTwo}) : {score.playerTwo}
                         </h2>
                     </div>
                     <div className="buttons">

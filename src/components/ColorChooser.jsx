@@ -48,7 +48,7 @@ function ColorChooser ({playerColors, setPlayerColors,setPlayer}) {
                     )
                 })}
             </select>
-            <div>
+            <div className="sample-color" style={{backgroundColor:playerColors.playerOne}}>
             </div>
 
             <h2>Player Two</h2>
@@ -59,8 +59,7 @@ function ColorChooser ({playerColors, setPlayerColors,setPlayer}) {
                     )
                 })}
             </select>
-            <div>
-
+            <div className="sample-color" style={{backgroundColor:playerColors.playerTwo}}>
             </div>
             <button onClick={handleLockIn}>Lock in Colors</button>
         </div>

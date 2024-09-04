@@ -16,17 +16,19 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .buttons {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 6px;
+    
 }
 button{
     width: 15vw;
     height: 5vh;
     border: none;
     border-radius: 25px;
+    margin-top: 6px;
     background-color: yellowgreen;
 }
 button:hover{
@@ -42,6 +44,10 @@ button:hover{
     gap: 5%;
     align-items: center;
     font-size: 40px;
+}
+.sample-color{
+    width: 5%;
+    height: 5%;
 }
 .game-board {
     display: grid;
