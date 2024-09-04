@@ -11,9 +11,27 @@
 .score-board{
     width: 700px;   
 }
-.score{
+.scoresButtons{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+}
+button{
+    width: 15vw;
+    height: 5vh;
+    border: none;
+    border-radius: 25px;
+    background-color: yellowgreen;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgba(153, 205, 50, 0.87);
 }
 .color-chooser {
     width: 700px;
@@ -29,7 +47,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr); 
     grid-template-rows: repeat(6, 1fr);
-    margin-top: 2.5%;
+    margin-top: .75%;
     width: 700px;
     height: 600px;
 }
@@ -82,4 +100,5 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }

@@ -24,19 +24,19 @@ function ScoreBoard({score, setScore, playerColors,setPlayerColors,setPlayer}) {
                 Connect Four
             </h1>
             {playerColors.locked &&
-                <div className="scores">
+                <div className="scoresButtons">
                     <div>
                         <h1>Scores:</h1>
-                        <h2>
+                        <h2 >
                             Player One({playerColors.playerOne}) : {score.playerOne}
                         </h2>
-                        <h2>
+                        <h2 >
                             Player Two({playerColors.playerTwo}) : {score.playerTwo}
                         </h2>
                     </div>
-                    <div>
-                        <button onClick={handleScoreReset}>RESET SCORES</button>  
-                        <button onClick={handleChangeColors} style={{marginLeft:"2%"}}>Change Colors</button>
+                    <div className="buttons">
+                        <button onClick={handleScoreReset}>Reset Scores</button>  
+                        <button onClick={handleChangeColors}>Change Colors</button>
                     </div>
                     
                 </div>    
